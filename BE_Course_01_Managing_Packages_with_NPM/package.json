@@ -1,0 +1,19 @@
+{
+	"name": "fcc-learn-npm-package-json",
+  "author": "Dasaavawar",
+  "description": "Backend and API fCC tutorial",
+  "keywords": [ "backend", "api", "freecodecamp", "tutorial" ],
+  "license": "MIT",
+  "version": "1.0",
+	"dependencies": {
+		"express": "^4.14.0"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
+	}
+}
