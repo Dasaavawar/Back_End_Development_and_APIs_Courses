@@ -1,7 +1,7 @@
-# freeCodeCamp - Back End Development and APIs - Courses - I - Introduction to the Managing Packages with npm Challenges
+# freeCodeCamp - Back End Development and APIs - Courses - I - Managing Packages with NPM
 
 
-## 1. Courses - Introduction to the Managing Packages with npm Challenges
+## 1. Courses - Introduction to the Managing Packages with NPM Challenges
 
 This is the boilerplate code for the Managing Packages with NPM. Instructions for working on these challenges start at https://www.freecodecamp.org/learn/apis-and-microservices/managing-packages-with-npm/
 
