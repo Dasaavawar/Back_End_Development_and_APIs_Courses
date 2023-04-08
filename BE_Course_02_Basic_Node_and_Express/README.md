@@ -1,4 +1,4 @@
-# freeCodeCamp - Back End Development and APIs - Courses - II - Introduction to the Basic Node and Express Challenges
+# freeCodeCamp - Back End Development and APIs - Courses - II - Basic Node and Express
 
 
 ## 2. Courses - Introduction to the Basic Node and Express Challenges
