@@ -1,5 +1,4 @@
-# freeCodeCamp - Back End Development and APIs - Courses - III - Introduction to the MongoDB and Mongoose Challenges
-
+# freeCodeCamp - Back End Development and APIs - Courses - III - MongoDB and Mongoose
 
 ## 3. Courses - Introduction to the MongoDB and Mongoose Challenges
 
