@@ -1,12 +1,12 @@
 require('dotenv').config();
 
-// # 1 - Install & Set up mongoose
+// #1 - Install & Set up mongoose
 const mongoose = require('mongoose');
 const url = process.env.MONGO_URI;
 mongoose.set('strictQuery', false);
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// # 2 - Create a Model
+// #2 - Create a Model
 const Schema = mongoose.Schema;
 
 const personSchema = new Schema({
@@ -15,7 +15,7 @@ const personSchema = new Schema({
   favoriteFoods: [String]
 });
 
-// # 3 - Create and Save a Record of a Model
+// #3 - Create and Save a Record of a Model
 const Person = mongoose.model("Person", personSchema);
 
 const createAndSavePerson = (done) => {
@@ -26,7 +26,7 @@ const createAndSavePerson = (done) => {
   })
 };
 
-// # 4 - Create Many Records with model.create()
+// #4 - Create Many Records with model.create()
 const arrayOfPeople = [{ name: "Willy McDought", age: 42, favoriteFoods: ["beef", "oats", "pasta"] },
 { name: "Emma Maughan", age: 29, favoriteFoods: ["wine", "cheese", "apple"] },
 { name: "Rob Wadsworth", age: 34, favoriteFoods: ["rabbit", "tomatoes", "salmon"] }];
@@ -38,7 +38,7 @@ const createManyPeople = (arrayOfPeople, done) => {
   })
 };
 
-// # 5 - Use model.find() to Search Your Database
+// #5 - Use model.find() to Search Your Database
 const findPeopleByName = (personName, done) => {
   Person.find({ name: personName }, function(err, people) {
     if (err) return console.error(err);
@@ -46,7 +46,7 @@ const findPeopleByName = (personName, done) => {
   })
 };
 
-// # 6 - Use model.findOne() to Return a Single Matching Document from Your Database
+// #6 - Use model.findOne() to Return a Single Matching Document from Your Database
 const findOneByFood = (food, done) => {
   Person.findOne({ favoriteFoods: food }, function(err, people) {
     if (err) return console.error(err);
@@ -54,7 +54,7 @@ const findOneByFood = (food, done) => {
   })
 };
 
-// # 7 - Use model.findById() to Search Your Database By _id
+// #7 - Use model.findById() to Search Your Database By _id
 const findPersonById = (personId, done) => {
   Person.findById({ _id: personId }, function(err, people) {
     if (err) return console.error(err);
@@ -62,7 +62,7 @@ const findPersonById = (personId, done) => {
   })
 };
 
-// # 8 - Perform Classic Updates by Running Find, Edit, then Save
+// #8 - Perform Classic Updates by Running Find, Edit, then Save
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
   Person.findById(personId, (err, person) => {
@@ -75,7 +75,7 @@ const findEditThenSave = (personId, done) => {
   })
 };
 
-// # 9 - Perform New Updates on a Document Using model.findOneAndUpdate()
+// #9 - Perform New Updates on a Document Using model.findOneAndUpdate()
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
 
@@ -85,7 +85,7 @@ const findAndUpdate = (personName, done) => {
   })
 };
 
-// # 10 - Delete One Document Using model.findByIdAndRemove
+// #10 - Delete One Document Using model.findByIdAndRemove
 const removeById = (personId, done) => {
   Person.findByIdAndRemove(personId, (err, people) => {
     if (err) return console.error(err);
@@ -93,7 +93,7 @@ const removeById = (personId, done) => {
   })
 };
 
-// # 11 - Delete Many Documents with model.remove()
+// #11 - Delete Many Documents with model.remove()
 const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
   Person.remove({name: nameToRemove}, function(err, people) {
@@ -102,7 +102,7 @@ const removeManyPeople = (done) => {
   })
 };
 
-// # 12 - Chain Search Query Helpers to Narrow Search Results
+// #12 - Chain Search Query Helpers to Narrow Search Results
 const queryChain = (done) => {
   const foodToSearch = "burrito";
   Person.find({favoriteFoods: foodToSearch})
